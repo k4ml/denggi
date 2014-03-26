@@ -11,10 +11,9 @@ params = {
 		'preview_button': 'Papar',
 	}
 resp = requests.post('http://idengue.remotesensing.gov.my/idengue/lokaliti_wabakB.php')
-html = scraperwiki.scrape(resp.content)
 #
 # # Find something on the page using css selectors
-root = lxml.html.fromstring(html)
+root = lxml.html.fromstring(resp.content)
 table = root.cssselect("#contentpaneopen")
 print table
 #
