@@ -14,7 +14,7 @@ resp = requests.post('http://idengue.remotesensing.gov.my/idengue/lokaliti_wabak
 #
 # # Find something on the page using css selectors
 root = lxml.html.fromstring(resp.content)
-table = root.cssselect("#contentpaneopen > tbody *")
+table = root.cssselect("#contentpaneopen *")
 print table
 #
 # # Write out to the sqlite database using scraperwiki library
