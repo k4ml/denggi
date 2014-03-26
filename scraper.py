@@ -8,7 +8,7 @@ import lxml.html
 # # Read in a page
 params = {
 		'negeri': 'JOHOR',
-		'preview_button': 'Papar,
+		'preview_button': 'Papar',
 	}
 resp = requests.post('http://idengue.remotesensing.gov.my/idengue/lokaliti_wabakB.php')
 html = scraperwiki.scrape(resp.content)
